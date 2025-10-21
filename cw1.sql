@@ -78,7 +78,7 @@ group by pensja.stanowisko;
 --m
 select sum(pensja.kwota) from pracownicy1
 join wynagrodzenie on pracownicy1.id_pracownika=wynagrodzenie.id_pracownika
-join pensja on pensja.id_pensji=wynagrodzenie.id_pensji
+join pensja on pensja.id_pensji=wynagrodzenie.id_pensji;
 
 --n
 select sum(pensja.kwota) from pracownicy1
@@ -100,4 +100,5 @@ delete from pracownicy1 where id_pracownika in
 select pracownicy1.id_pracownika from pracownicy1
 join wynagrodzenie on pracownicy1.id_pracownika=wynagrodzenie.id_pracownika
 join pensja on pensja.id_pensji=wynagrodzenie.id_pensji
-where pensja.kwota <1200);
+where pensja.kwota <120
+);
