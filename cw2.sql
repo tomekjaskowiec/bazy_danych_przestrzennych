@@ -82,3 +82,13 @@ where buildings.name= 'BuildingC';
 --g
 
 
+select * from buildings
+join roads r on r.name='RoadX'
+where st_y(st_centroid(buildings.geometry)) > st_y(st_centroid(r.geometry));
+
+--h
+select st_area(st_difference(b.geometry, p.geometryA)),
+        st_area(st_difference(p.geometryA, b.geometry))
+from buildings b,
+    (select st_geomfromtext('POLYGON((4 7, 6 7, 6 8, 4 8, 4 7))') AS geometryA) p
+WHERE b.name = 'BuildingC';
