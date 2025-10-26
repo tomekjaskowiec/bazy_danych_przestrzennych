@@ -58,7 +58,7 @@ select buildings.name, st_area(buildings.geometry) from buildings
 order by buildings.name;
 --d
 select buildings.name, ST_Perimeter(buildings.geometry) from buildings
-order by buildings.name;
+order by buildings.name
 limit 2;
 --e
 
@@ -91,4 +91,4 @@ select st_area(st_difference(b.geometry, p.geometryA)),
         st_area(st_difference(p.geometryA, b.geometry))
 from buildings b,
     (select st_geomfromtext('POLYGON((4 7, 6 7, 6 8, 4 8, 4 7))') AS geometryA) p
-WHERE b.name = 'BuildingC';
+where b.name = 'BuildingC';
