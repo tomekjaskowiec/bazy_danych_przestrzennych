@@ -35,6 +35,10 @@ set geometry = ST_SetSRID(geometry, 0)
 where st_srid(t2018_kar_poi_table.geometry) != 0;
 
 
+
+
+
+
 Select poi.type, count(poi.*) from (select poi2019.* from t2019_kar_poi_table poi2019
                except select poi2018.* from t2018_kar_poi_table poi2018) poi
 join
