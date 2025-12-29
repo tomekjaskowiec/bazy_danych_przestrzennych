@@ -103,6 +103,9 @@ VALUES (
 
 
 
+
+
+
 --2
 SELECT
     st_area(
@@ -118,16 +121,20 @@ WHERE a.name = 'object3'
   AND b.name = 'object4';
 
 
+
+
+
+
 --3
 SELECT
     st_makepolygon(st_addpoint(geometry, st_startpoint(geometry)))
 FROM public.obiekty
 WHERE name = 'object4';
+
+
+
+
 --4
-SELECT st_collect(a.geometry, b.geometry)
-FROM public.obiekty a, public.obiekty b
-WHERE a.name = 'object3'
-  AND b.name = 'object4';
 
 INSERT INTO public.obiekty (geometry, name)
 VALUES (
@@ -138,6 +145,10 @@ WHERE a.name = 'object3'
   AND b.name = 'object4'),
     'object7'
 );
+
+
+
+
 
 
 --5

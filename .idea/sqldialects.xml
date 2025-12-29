@@ -4,5 +4,11 @@
     <file url="file://$PROJECT_DIR$/cw1.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/cw2.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/cw3.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/cw5.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/cw6-7.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/cw9.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/geoportale.sql" dialect="GenericSQL" />
+    <file url="file://$USER_HOME$/Downloads/states_dump.sql" dialect="PostgreSQL" />
+    <file url="PROJECT" dialect="PostgreSQL" />
   </component>
 </project>
